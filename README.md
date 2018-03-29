@@ -1,2 +1,1 @@
-# leetcode
-leetcode by c++11
+知识整理，方便后续学习
