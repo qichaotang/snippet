@@ -1,17 +1,36 @@
-/*!
- * Copyright (c) 2018 by Contributors
- * \file class_register_main.cpp
- * \brief test class register.
- * \author Qichao Tang(qichaotang97@163.com)
- */
+// Copyright (c) 2018 by contributors. All Rights Reserved.
+// Author: Qichao Tang <qichaotang97@163.com>
 
 #include <iostream>
-#include "mapper.h"
+
+#include "base_mapper.h"
+
+namespace class_register_rf {
+
+BaseMapper* create_mapper(const std::string& mapper_name) {
+    BaseMapper* p_base_mapper{nullptr};
+    p_base_mapper = CREATE_MAPPER(mapper_name.c_str());
+    if (p_base_mapper == nullptr) {
+        std::cout << "cannot create mapper--->" << mapper_name << std::endl;
+    }
+    return p_base_mapper;
+}
+
+}  // namespace class_register_rf
 
 int main(int argc, char** argv) {
-    auto mapper = CREATE_MAPPER("HelloMapper");
-    std::cout << "mapper_name--->" << mapper->GetMapperName() << std::endl;
-    auto mapper_hi = CREATE_MAPPER("HiMapper");
-    std::cout << "mapper_name--->" << mapper_hi->GetMapperName() << std::endl;
+    // test HelloMapper
+    {
+        std::string mapper_name = "HelloMapper";
+        auto p_base_mapper = class_register_rf::create_mapper(mapper_name);
+        std::cout << "mapper_name--->" << p_base_mapper->GetMapperName() << std::endl;
+    }
+    // test HiMapper
+    {
+        std::string mapper_name = "HiMapper";
+        auto p_base_mapper = class_register_rf::create_mapper(mapper_name);
+        std::cout << "mapper_name--->" << p_base_mapper->GetMapperName() << std::endl;
+    }
+
     return 0;
 }

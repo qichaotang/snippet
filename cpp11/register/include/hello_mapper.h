@@ -1,21 +1,19 @@
-/*!
- * Copyright (c) 2018 by Contributors
- * \file class_register_main.cpp
- * \brief test class register.
- * \author Qichao Tang(qichaotang97@163.com)
- */
+// Copyright (c) 2018 by contributors. All Rights Reserved.
+// Author: Qichao Tang <qichaotang97@163.com>
 
 #ifndef HELLO_MAPPER_H_
 #define HELLO_MAPPER_H_
 
-#include "mapper.h"
+#include "base_mapper.h"
 
-class HelloMapper : public Mapper {
-    virtual std::string GetMapperName() const {
+namespace class_register_rf {
+
+class HelloMapper : public BaseMapper {
+    virtual std::string GetMapperName() override {
         return "HelloMapper";
     }
 };
 
-
+}  // namespace class_register_rf
 
 #endif  // HELLO_MAPPER_H_

@@ -1,9 +1,6 @@
-/*!
- * Copyright (c) 2018 by Contributors
- * \file class_register_main.cpp
- * \brief test class register.
- * \author Qichao Tang(qichaotang97@163.com)
- */
+// Copyright (c) 2018 by contributors. All Rights Reserved.
+// Author: Qichao Tang <qichaotang97@163.com>
+// test class register.
 
 //
 // Defines several helper macros for registering class by a string name and
@@ -76,6 +73,8 @@
 
 #include <map>
 #include <string>
+
+namespace class_register_rf {
 
 // The first parameter, register_name, should be unique globally.
 // Another approach for this is to define a template for base class. It would
@@ -174,5 +173,7 @@
 
 #define CLASS_REGISTER_CREATE_OBJECT(register_name, entry_name_as_string) \
   GetRegistry_##register_name().CreateObject(entry_name_as_string)
+
+}  // namespace class_register_rf
 
 #endif  // CLASS_REGISTER_H_
