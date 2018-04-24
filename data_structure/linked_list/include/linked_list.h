@@ -10,7 +10,7 @@ namespace data_structure {
 // linked list node
 // template <typename T>
 typedef struct node {
-    int _data{0};  // TODO:后续改为 template
+    int _data{0};  // TODO:to change template
     struct node* _p_next{nullptr};
 } Node;
 

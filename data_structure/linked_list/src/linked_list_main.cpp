@@ -40,7 +40,7 @@ int test_linked_list() {
         }
     }
 
-    // delete data (no exist data)   // core?
+    // delete data (no exist data)
     {
         p_linked_list->remove(2);
         // display data
