@@ -5,7 +5,7 @@
 
 #include "base_mapper.h"
 
-namespace class_register_rf {
+namespace class_register {
 
 BaseMapper* create_mapper(const std::string& mapper_name) {
     BaseMapper* p_base_mapper{nullptr};
@@ -16,19 +16,19 @@ BaseMapper* create_mapper(const std::string& mapper_name) {
     return p_base_mapper;
 }
 
-}  // namespace class_register_rf
+}  // namespace class_register
 
 int main(int argc, char** argv) {
     // test HelloMapper
     {
         std::string mapper_name = "HelloMapper";
-        auto p_base_mapper = class_register_rf::create_mapper(mapper_name);
+        auto p_base_mapper = class_register::create_mapper(mapper_name);
         std::cout << "mapper_name--->" << p_base_mapper->GetMapperName() << std::endl;
     }
     // test HiMapper
     {
         std::string mapper_name = "HiMapper";
-        auto p_base_mapper = class_register_rf::create_mapper(mapper_name);
+        auto p_base_mapper = class_register::create_mapper(mapper_name);
         std::cout << "mapper_name--->" << p_base_mapper->GetMapperName() << std::endl;
     }
 

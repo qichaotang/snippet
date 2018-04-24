@@ -5,10 +5,10 @@
 #include "hello_mapper.h"
 #include "hi_mapper.h"
 
-namespace class_register_rf {
+namespace class_register {
 
 CLASS_REGISTER_IMPLEMENT_REGISTRY(base_mapper_register, BaseMapper);
 REGISTER_MAPPER(HelloMapper);
 REGISTER_MAPPER(HiMapper);
 
-}  // namespace class_register_rf
+}  // namespace class_register

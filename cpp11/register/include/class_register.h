@@ -74,7 +74,7 @@
 #include <map>
 #include <string>
 
-namespace class_register_rf {
+namespace class_register {
 
 // The first parameter, register_name, should be unique globally.
 // Another approach for this is to define a template for base class. It would
@@ -174,6 +174,6 @@ namespace class_register_rf {
 #define CLASS_REGISTER_CREATE_OBJECT(register_name, entry_name_as_string) \
   GetRegistry_##register_name().CreateObject(entry_name_as_string)
 
-}  // namespace class_register_rf
+}  // namespace class_register
 
 #endif  // CLASS_REGISTER_H_

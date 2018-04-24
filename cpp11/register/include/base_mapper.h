@@ -6,7 +6,7 @@
 
 #include "class_register.h"
 
-namespace class_register_rf {
+namespace class_register {
 
 class BaseMapper {
 public:
@@ -24,6 +24,6 @@ CLASS_REGISTER_DEFINE_REGISTRY(base_mapper_register, BaseMapper);
 #define CREATE_MAPPER(mapper_name_as_string)                            \
   CLASS_REGISTER_CREATE_OBJECT(base_mapper_register, mapper_name_as_string)
 
-}  // namespace class_register_rf
+}  // namespace class_register
 
 #endif  // BASE_MAPPER_H_

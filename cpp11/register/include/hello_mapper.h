@@ -6,7 +6,7 @@
 
 #include "base_mapper.h"
 
-namespace class_register_rf {
+namespace class_register {
 
 class HelloMapper : public BaseMapper {
     virtual std::string GetMapperName() override {
@@ -14,6 +14,6 @@ class HelloMapper : public BaseMapper {
     }
 };
 
-}  // namespace class_register_rf
+}  // namespace class_register
 
 #endif  // HELLO_MAPPER_H_
