@@ -22,12 +22,19 @@ public:
     bool empty();
     int push_front(int data);
     int push_back(int data);
+    int insert(int data, int index = 0);
+    int length();
     int remove(int data);
+    int remove_index(int index);
+    Node* find(int data);
+    Node* find_index(int index);
+    int reverse();
     int display();
 
 private:
     Node* _p_head{nullptr};
     Node* _p_tail{nullptr};
+    int _length{0};
 };
 
 }  // namespace data_structure
